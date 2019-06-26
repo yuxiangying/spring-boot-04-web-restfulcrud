@@ -16,8 +16,8 @@ import java.util.List;
  */
 @Component
 public class EmployeeDao {
-    private List<Employee> employees;
-    public List<Employee> getAll(){
+    private Collection<Employee> employees;
+    public Collection<Employee> getAll(){
         employees.add(new Employee(1001, "zhangsan", "1044@qq.com", 1, new Department(1,"A-a") , new Date()));
         employees.add(new Employee(1002, "lisi", "1055@qq.com", 1, new Department(2,"A-b") , new Date()));
         employees.add(new Employee(1003, "wangwu", "1066@qq.com", 0, new Department(3,"A-c") , new Date()));
