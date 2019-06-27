@@ -4,7 +4,7 @@ import com.yxy.springboot.entities.Department;
 import com.yxy.springboot.entities.Employee;
 import org.springframework.stereotype.Component;
 
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -16,8 +16,8 @@ import java.util.List;
  */
 @Component
 public class EmployeeDao {
-    private Collection<Employee> employees;
-    public Collection<Employee> getAll(){
+    public List<Employee> getAll(){
+        List<Employee> employees = new ArrayList<>();
         employees.add(new Employee(1001, "zhangsan", "1044@qq.com", 1, new Department(1,"A-a") , new Date()));
         employees.add(new Employee(1002, "lisi", "1055@qq.com", 1, new Department(2,"A-b") , new Date()));
         employees.add(new Employee(1003, "wangwu", "1066@qq.com", 0, new Department(3,"A-c") , new Date()));
